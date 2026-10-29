@@ -12,27 +12,27 @@ app.use(express.json())
 
 const client = new MongoClient(process.env.MONGODB_URI);
 
-// export async function ConnectDB() {
-//     try {
-//     await client.connect();
-//     console.log("You successfully connected to MongoDB!");
-//     return client;
-//   } catch (err) {
-//     console.dir(err);
-//   }
-// }
-
-
 export async function ConnectDB() {
-  try {
+    try {
     await client.connect();
-    console.log("Successfully connected to MongoDB!");
+    console.log("You successfully connected to MongoDB!");
     return client;
-  } catch (error) {
-    console.error("MongoDB connection failed:", error);
-    throw error;
+  } catch (err) {
+    console.dir(err);
   }
 }
+
+
+// export async function ConnectDB() {
+//   try {
+//     await client.connect();
+//     console.log("Successfully connected to MongoDB!");
+//     return client;
+//   } catch (error) {
+//     console.error("MongoDB connection failed:", error);
+//     throw error;
+//   }
+// }
 
 const mongoClient = await ConnectDB()
 
