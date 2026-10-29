@@ -1,0 +1,20 @@
+cat > .gitignore <<'EOF'
+# Dependencies
+**/node_modules/
+
+# Environment files and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Build outputs
+**/.next/
+**/dist/
+**/build/
+**/coverage/
+
+# Logs and local files
+**/*.log
+.DS_Store
+*.tsbuildinfo
+EOF
