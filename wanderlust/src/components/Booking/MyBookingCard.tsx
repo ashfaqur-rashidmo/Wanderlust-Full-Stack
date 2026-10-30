@@ -58,7 +58,7 @@ export function MyBookingCard({ bookings }: { bookings: Booking[] }) {
   const handleCancelBooking = async (bookingId: string) => {
     try {
       const res = await fetch(
-        `http://localhost:8000/my-bookings/${bookingId}`,
+        `${process.env.NEXT_PUBLIC_URL}/my-bookings/${bookingId}`,
         {
           method: "DELETE",
         }

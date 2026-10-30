@@ -44,7 +44,7 @@ const MyBookingPage = async () => {
 
   try {
     const res = await fetch(
-      `http://localhost:8000/my-bookings/${(user.email)}`,
+      `${process.env.NEXT_PUBLIC_URL}/my-bookings/${(user.email)}`,
 
       { 
         method: "GET",

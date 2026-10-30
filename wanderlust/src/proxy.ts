@@ -28,6 +28,7 @@ export const config = {
   matcher: [
     "/add-destination",
     "/my-bookings",
-    "/destination/:path"
+    "/destination/:path",
+    "/destination"
   ],
 }

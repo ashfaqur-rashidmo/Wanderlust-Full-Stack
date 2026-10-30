@@ -36,7 +36,7 @@ const DeleteDestination = ({
 
     try {
       const res = await fetch(
-        `http://localhost:8000/destination/${destination}`,
+        `${process.env.NEXT_PUBLIC_URL}/destination/${destination}`,
         {
           method: "DELETE",
           headers: {

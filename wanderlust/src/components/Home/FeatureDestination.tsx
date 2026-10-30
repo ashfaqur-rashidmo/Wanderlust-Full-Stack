@@ -6,7 +6,7 @@ const FeatureDestination = async () => {
   let destinations: Destination[] = [];
 
   try {
-    const res = await fetch("http://localhost:8000/feature-destinations");
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/feature-destinations`);
 
     if (res.ok) {
       const data = await res.json();

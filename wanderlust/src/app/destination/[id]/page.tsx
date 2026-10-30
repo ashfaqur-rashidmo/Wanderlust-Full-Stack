@@ -12,7 +12,7 @@ const DestinationDetailsPage = async ({ params }: PageProps<"/destination/[id]">
 
   console.log("Token from destination details page:", token);
 
-  const res = await fetch(`http://localhost:8000/destination/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/destination/${id}`, {
     headers: {
       authorization: `Bearer ${token}`,
     }

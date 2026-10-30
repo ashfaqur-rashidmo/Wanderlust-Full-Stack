@@ -3,13 +3,7 @@
 import { useState } from "react";
 
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import DestinationCard from "./DestinationCard";
 import type { Destination } from "@/lib/destination";
 
